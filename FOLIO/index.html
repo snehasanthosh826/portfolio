@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Your Name">
+    <title>Sneha S Nair | Developer Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="nav" aria-label="Main navigation">
+        <div class="container nav-inner">
+            <span class="nav-brand">Sneha S Nair</span>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="container">
+            <p class="hero-tag reveal">Hey, I'm</p>
+            <h1 class="hero-title reveal">Sneha S Nair</h1>
+            <p class="hero-role reveal">A Creative Technologist exploring the intersection of electronics, AI, and design to build intelligent and impactful solutions." ✨ <span class="highlight">B.Tech AEI, Kerala</span></p>
+            <p class="hero-bio reveal">Building the future through code, circuits, and human-centered design.</p>
+            <div class="hero-ctas reveal">
+                <a href="#projects" class="btn btn-primary">See My Projects</a
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="section" id="projects">
+            <div class="container">
+                <p class="section-label">01 - Work</p>
+                <h2 class="section-title">Projects</h2>
+                
+                <div class="projects-grid">
+                    
+                    <article class="card reveal">
+                        <span class="card-tag">UI / UX Design</span>
+                        <h3 class="card-title">TIDE</h3>
+                        <p class="card-desc">A complete task manager app-Token-Based Design System • 9 High-Fidelity Screens • Interactive Prototype • AI-Assisted Productivity Workflows • Ocean-Inspired UI/UX Design.</p>
+                        <div class="card-meta">
+                            <span class="chip">Figma</span>
+                            <span class="chip">Design System</span>
+                        </div>
+                        <a href="https://www.figma.com/proto/dpE5VeYfxiJfX1txiEHrlK/Tide-Task-manager?node-id=31-413&t=ugsrQWLRRCCxnw8b-1"target="_blank" rel="noopener" class="card-link">View prototype</a>
+                    </article>
+
+                    <article class="card reveal">
+                        <span class="card-tag">Frontend Development</span>
+                        <h3 class="card-title">Folio</h3>
+                        <p class="card-desc">A clean, responsive personal portfolio website built with semantic HTML, modular CSS custom property tokens, and vanilla JavaScript handlers.</p>
+                        <div class="card-meta">
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS Tokens</span>
+                            <span class="chip">JavaScript</span>
+                        </div>
+                        <a href="#" class="card-link">View Repository</a>
+                    </article>
+
+                    <article class="card reveal">
+                        <span class="card-tag">Backend Automation</span>
+                        <h3 class="card-title">Pulse</h3>
+                        <p class="card-desc">An active automation bot configuration framework deployed to monitor data streams, parse responses, and dispatch custom notifications dynamically.</p>
+                        <div class="card-meta">
+                            <span class="chip">Python</span>
+                            <span class="chip">API Integration</span>
+                        </div>
+                        <a href="https://github.com" target="_blank" rel="noopener" class="card-link">View Project</a>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="container">
+                <p class="section-label">02 - Mastery</p>
+                <h2 class="section-title">Skills</h2>
+                
+                <div class="skills-wrapper">
+                    
+                    <div class="skill reveal">
+                        <div class="skill-head">
+                            <span class="skill-name">UI / UX Design</span>
+                            <span class="skill-pct">80%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="--w: 90%; background: var(--pri-low);"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill reveal">
+                        <div class="skill-head">
+                            <span class="skill-name">HTML &amp; CSS</span>
+                            <span class="skill-pct">85%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="--w: 85%; background: var(--pri-low);"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill reveal">
+                        <div class="skill-head">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-pct">25%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="--w: 25%; background: var(--pri-low);"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container">
+                <p class="section-label">03 - Availability</p>
+                <h2 class="section-title">Get In Touch</h2>
+                
+                <div class="contact-grid">
+                    <a href="mailto:your.email@example.com" class="contact-card reveal">
+                        <h3>Email</h3>
+                        <p>your.email@example.com</p>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener" class="contact-card reveal">
+                        <h3>GitHub</h3>
+                        <p>github.com/yourusername</p>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-card reveal">
+                        <h3>LinkedIn</h3>
+                        <p>linkedin.com/in/yourusername</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Your Name. Handcoded using modular design systems.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">⬆️</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
