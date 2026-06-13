@@ -8,7 +8,7 @@ import requests
 def check_weather_and_alert():
     # 1. Load configuration from secure environment variables
     api_key = os.getenv("OPENWEATHER_API_KEY")
-    city = os.getenv("CITY", "KOCHI")
+    city = os.getenv("CITY", "Thiruvananthapuram")
     sender_email = os.getenv("SENDER_EMAIL")
     sender_password = (
         os.getenv("SENDER_PASSWORD")  # Your 16-digit Gmail App Password
