@@ -2,6 +2,8 @@
 # Fetches weather (wttr.in) & quotes (zenquotes.io)
 # Pulse Daily Summary Bot
 # Fetches weather, quotes, and emails the summary
+# Pulse Daily Summary Bot
+# Fetches weather, quotes, and emails the summary
 import os
 import smtplib
 from datetime import date
@@ -54,11 +56,11 @@ TODAY'S QUOTE
 
 def send_email(summary_text):
     """Fetches credentials from environment variables and emails the summary."""
-    sender_email = os.getenv("SENDER_EMAIL")  # The sender's Gmail address
+    sender_email = os.getenv("SENDER_EMAIL")
     sender_password = os.getenv(
         "SENDER_PASSWORD"
     )  # Must be a 16-digit Google App Password
-    receiver_email = os.getenv("RECEIVER_EMAIL")  # The recipient's email address
+    receiver_email = os.getenv("RECEIVER_EMAIL")
 
     # If any credential variable is missing, skip email sending and don't crash
     if not sender_email or not sender_password or not receiver_email:
