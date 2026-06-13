@@ -32,9 +32,9 @@ jobs:
     - name: Run daily summary script
       env:
         CITY: "Thiruvananthapuram"
-        SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
-        SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
-        RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+        SENDER_EMAIL: ${{ secrets._SENDER_EMAIL }}
+        SENDER_PASSWORD: ${{ secrets._SENDER_PASSWORD }}
+        RECEIVER_EMAIL: ${{ secrets._RECEIVER_EMAIL }}
       run: python bot.py
 
     # 5. Extract and upload the text file before the runner clears out
