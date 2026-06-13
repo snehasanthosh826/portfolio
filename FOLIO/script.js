@@ -79,3 +79,43 @@ const elementsToAnimate = document.querySelectorAll('.reveal');
 elementsToAnimate.forEach(element => {
     revealObserver.observe(element);
 });
+async function renderPortfolioProjects() {
+    const projectsContainer = document.getElementById("projects-grid");
+    if (!projectsContainer) return;
+
+    try {
+        // Fetch the compiled data file relative to the site path root
+        const response = await fetch("projects.json");
+        const projects = await response.json();
+
+        // Clear out hardcoded static template mockups or loader loops
+        projectsContainer.innerHTML = "";
+
+        projects.forEach(project => {
+            const card = document.createElement("div");
+            card.className = "portfolio-card";
+            
+            card.innerHTML = `
+                <div class="card-body">
+                    <span class="badge">${project.primary_language}</span>
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <div class="card-meta">
+                        <span>⭐ ${project.stars_count}</span>
+                        <span>🍴 ${project.forks_count}</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="${project.html_url}" target="_blank" class="btn btn-secondary">Source Code</a>
+                        ${project.homepage_live ? `<a href="${project.homepage_live}" target="_blank" class="btn btn-primary">Live Demo</a>` : ''}
+                    </div>
+                </div>
+            `;
+            projectsContainer.appendChild(card);
+        });
+    } catch (error) {
+        console.error("Critical error parsing projects manifest array:", error);
+        projectsContainer.innerHTML = `<p class="error-msg">Failed to load projects. Please try refreshing.</p>`;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", renderPortfolioProjects);
