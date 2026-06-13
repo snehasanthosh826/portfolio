@@ -29,7 +29,7 @@ jobs:
       env:
         OPENWEATHER_API_KEY: ${{ secrets._OPENWEATHER_API_KEY_ }}
         CITY: "Thiruvananthapuram"
-        SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
-        SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
-        RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+        SENDER_EMAIL: ${{ secrets._SENDER_EMAIL_ }}
+        SENDER_PASSWORD: ${{ secrets._SENDER_PASSWORD_ }}
+        RECEIVER_EMAIL: ${{ secrets._RECEIVER_EMAIL_ }}
       run: python weather.py
